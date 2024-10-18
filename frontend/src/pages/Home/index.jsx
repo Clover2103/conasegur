@@ -3,6 +3,7 @@ import { HomeSlider } from '../../components/HomeSlider';
 import { HomeAboutUs } from '../../components/HomeAboutUs';
 import { HomeMAndV } from '../../components/HomeMAndV';
 import { HomeAwards } from '../../components/HomeAwards';
+import { HomeBigCalendar } from '../../components/HomeBigCalendar';
 import { HomeAllies } from '../../components/HomeAllies';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <HomeAboutUs />
       <HomeMAndV />
       <HomeAwards />
+      <HomeBigCalendar />
       <HomeAllies />
     </div>
   );
