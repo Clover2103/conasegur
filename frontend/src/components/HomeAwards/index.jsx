@@ -30,8 +30,6 @@ const HomeAwards = () => {
     sliderRef,
     scrollLeft,
     scrollRight,
-    handleMouseEnter,
-    handleMouseLeave,
   } = useCarrucel(images.length, false, 5000);
 
   const currentSede = awardsInfo[currentIndex];
@@ -39,7 +37,7 @@ const HomeAwards = () => {
   return (
     <div className="bodyHomeAwards">
       <h2 className="pt-5">NUESTROS PREMIOS</h2>
-      <div className="awardsSlider mb-5"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="awardsSlider mb-5" >
         <div className="contAwardsSlider">
           <button className="navBtnAward prevBtnAward" onClick={scrollLeft}>&#10094;</button>
           <div className="sliderAwards" ref={sliderRef}>

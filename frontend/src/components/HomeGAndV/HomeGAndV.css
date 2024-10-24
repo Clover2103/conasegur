@@ -1,0 +1,17 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+
+.bodyHomeGAndV {
+  min-height: 500px;
+  background-color: var(--cogna-red-lite);
+  text-align: center;
+}
+
+.bodyHomeGAndV h2 {
+  color: var(--cogna-white);
+}

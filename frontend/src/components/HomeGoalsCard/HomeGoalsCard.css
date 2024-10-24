@@ -1,0 +1,75 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.contCarrucel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.goalsCarrucel {
+  background-color: var(--cogna-white);
+}
+
+.nav-btn-QA {
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  z-index: 150;
+  cursor: pointer;
+  width: 100%;
+  font-size: 30px;
+}
+
+.contGoalsCarrucel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
+  width: 80%;
+  transition: all 1s ease-in-out;
+}
+
+.goalsCarrucel-0,
+.goalsCarrucel-1,
+.goalsCarrucel-2 {
+  position: absolute;
+  border: 1.8px solid var(--cogna-dark);
+  border-top: 8px solid var(--cogna-dark);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.goalsCarrucel-0,
+.goalsCarrucel-2 {
+  position: absolute;
+  width: 80%;
+  height: 200px;
+}
+
+.goalsCarrucel-1 {
+  z-index: 150;
+  width: 100%;
+  height: 220px;
+}
+
+.goalsCarrucel-0 {
+  top: 0%;
+  z-index: 80;
+}
+
+.goalsCarrucel-2 {
+  top: 50%;
+}
