@@ -62,16 +62,6 @@ const HomeBigCalendar = () => {
           };
         }).filter(event => event !== null);
 
-        // Combinar eventos de la API y los generados
-        const combinedEvents = [
-          ...socioHumanisticaEvents,
-          ...procedimientosOperativosEvents,
-          ...areaLegalEvents,
-          ...apiEvents,
-        ];
-
-        setEvents(combinedEvents);
-
       } catch (error) {
         console.error('Error fetching events:', error);
       }
