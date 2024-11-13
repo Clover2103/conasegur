@@ -1,0 +1,80 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.contCarrucelVD {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.VDCarrucel {
+  background-color: var(--cogna-white);
+}
+
+.VDCarrucel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-btn-QA {
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  z-index: 150;
+  cursor: pointer;
+  width: 100%;
+  font-size: 30px;
+}
+
+.contVDCarrucel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
+  width: 80%;
+  transition: all 1s ease-in-out;
+}
+
+.VDCarrucel-0,
+.VDCarrucel-1,
+.VDCarrucel-2 {
+  position: absolute;
+  border: 1.8px solid var(--cogna-red-dark);
+  border-top: 8px solid var(--cogna-red-dark);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.VDCarrucel-0,
+.VDCarrucel-2 {
+  position: absolute;
+  width: 80%;
+  height: 200px;
+}
+
+.VDCarrucel-1 {
+  z-index: 150;
+  width: 100%;
+  height: 280px;
+}
+
+.VDCarrucel-0 {
+  top: 0%;
+  z-index: 80;
+}
+
+.VDCarrucel-2 {
+  top: 50%;
+}

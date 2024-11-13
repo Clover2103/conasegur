@@ -1,0 +1,52 @@
+:root {
+    --cogna-red-dark: #B2463C;
+    --cogna-red-lite: #E2A897;
+    --cogna-white: #FFFFFF;
+    --cogna-dark: #000000;
+  }
+
+.redes-flotantes {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 900;
+}
+
+.re-cont-flotantes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cogna-red-dark);
+    border-radius: 5px;
+    border: 1px solid var(--cogna-red-lite);
+    width: 47px;
+    height: calc(45px * 4);
+}
+
+.cl-p {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--cogna-white);
+    height: 45px;
+    font-size: 24px;
+}
+
+.redes .redes-icon {
+    color: var(--cogna-white);
+    padding: 8px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.con-re-float:hover {
+    background-color: #171b4262;
+    border-radius: 5px;
+}

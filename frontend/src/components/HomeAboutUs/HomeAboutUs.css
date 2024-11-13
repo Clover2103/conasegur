@@ -1,0 +1,62 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.bodyHomeAboutUs {
+  height: 500px;
+}
+
+.containerHomeAboutUs {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.imageHomeAboutUs {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+imageHomeAboutUs img {
+  width: 100%;
+  height: 100%;
+}
+
+.contHomeAboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  padding: 25px;
+  background-color: var(--cogna-white);
+  border: 1.5px solid var(--cogna-red-dark);
+}
+
+.contHomeAboutUs button {
+  background-color: var(--cogna-red-dark);
+  color: var(--cogna-white);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}

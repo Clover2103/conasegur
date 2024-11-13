@@ -1,0 +1,28 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.bodyHomeVD {
+  min-height: 700px;
+  background-color: var(--cogna-white);
+  text-align: center;
+}
+
+.bodyHomeVD h2 {
+  color: var(--cogna-red-dark);
+}
+
+.contentVD {
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contPhotoVD {
+  width: 100%;
+}

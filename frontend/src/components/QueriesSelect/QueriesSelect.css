@@ -1,0 +1,10 @@
+.bodyConsultationSelect {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultation-cont {
+  width: 380px;
+}

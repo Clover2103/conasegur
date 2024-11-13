@@ -1,0 +1,70 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.navBarResponsive {
+  background-color: var(--cogna-white);
+  border-bottom: 1.5px solid var(--aiex-yellow);
+}
+
+.navBarResponsive__header {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navBarResponsive__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conasegur-logo-navbar img{
+  height: 110px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navBarResponsive__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navBarResponsive__links a {
+  text-decoration: none;
+  color: var(--cogna-dark);
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navBarResponsive__links a:hover {
+  background-color: var(--cogna-red-lite);
+  color: var(--cogna-dark);
+}
+
+.btnFormRes button {
+  margin: 10px auto;
+  width: 90%;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--cogna-red-lite);
+  color: var(--cogna-white);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}

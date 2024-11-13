@@ -1,0 +1,30 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.bodyHomeBigCalendar {
+  width: 100%;
+}
+
+.rbc-header {
+  background-color: var(--cogna-red-dark);
+}
+
+.rbc-header span {
+  color: var(--cogna-white);
+}
+
+.rbc-toolbar-label {
+  color: var(--cogna-red-dark)
+}
+
+.rbc-label {
+  color: var(--cogna-white);
+}
+
+.rbc-time-gutter{
+  background-color: var(--cogna-red-dark);
+}
