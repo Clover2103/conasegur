@@ -24,12 +24,16 @@ const NavBar = ( ) => {
       </div>
 
       <div className="btnForm">
-        <button>
-          <GiArchiveRegister /> FES 4.0
-        </button>
-        <button>
-          <GiArchiveRegister /> TÉCNICO        
-        </button>
+        <a href="https://e-learning.conasegur.com.co/" target="_blank">
+          <button>
+            <GiArchiveRegister /> FES 4.0
+          </button>
+        </a>
+        <a href="https://virtual.poliagro.edu.co/course/index.php?categoryid=130" target="_blank">
+          <button>
+            <GiArchiveRegister /> TÉCNICO        
+          </button>
+        </a>
       </div>
     </div>
   );

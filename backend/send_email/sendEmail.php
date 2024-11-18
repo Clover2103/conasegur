@@ -56,8 +56,8 @@ try {
     $mail->Port = 587;
 
     // Configurar el remitente y el destinatario
-    $mail->setFrom('ingenieria@cognoseguridad.com', 'Contacto desde pagina web COGNOSEGURIDAD LTDA');
-    $mail->addAddress('cognoseguridad@cognoseguridad.com', $nombre);
+    $mail->setFrom('ingenieria@cognoseguridad.com', 'Contacto desde pagina web CONASEGUR FES 4.0');
+    $mail->addAddress('conasegur@conasegur.com.co', $nombre);
 
     // Contenido del correo
     $mail->isHTML(true);

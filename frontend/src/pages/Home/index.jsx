@@ -34,7 +34,7 @@ const Home = ({ showModal }) => {
       
       showModal(
         <a href={randomImage.link} target="_blank" rel="noopener noreferrer">
-          <img src={randomImage.src} style={{ width: '100%', height: '95%' }} alt="Imagen aleatoria" />
+          <img src={randomImage.src} className='img-fluid'  alt="Imagen aleatoria" />
           <button className="w-100 btn btn-dark text-white ">CONOCER MAS</button>
         </a>
       );
