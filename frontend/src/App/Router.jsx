@@ -49,7 +49,7 @@ const RouterPages = () => {
       <Routes>
         <Route path='/' element={<Preview />} />
         <Route path='/home' element={<Home showModal={showModal}/>} />
-        <Route path='/training' element={<Training />} />
+        <Route path='/training' element={<Training showModal={showModal}/>} />
         <Route path='/queries' element={<Queries  showModal={showModal}/>} />
         <Route path='/contacte' element={<Contacte />} />
       </Routes>

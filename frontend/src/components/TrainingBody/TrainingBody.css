@@ -1,0 +1,179 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
+.training-container-modal {
+  height: 85vh;
+  overflow-y: auto;
+}
+
+.bodyTraining {
+  min-height: calc(320px * 4);
+  position: relative;
+}
+
+.cont-training {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--cogna-white);
+}
+
+.cont-training p {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  margin: 0;
+}
+
+.cont-training h5 {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.cont-training button{
+  font-size: 15px;
+}
+
+.cont-training-1 {
+  top: 3%;
+  left: 30%;
+}
+
+.cont-training-2 {
+  top: 25%;
+  left: 60%;
+}
+
+.cont-training-3 {
+  top: 50%;
+  left: 20%;
+}
+
+.cont-training-4 {
+  top: 70%;
+  left: 52%;
+}
+
+.cont-training-back {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background-color: var(--cogna-red-dark);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cont-training-back-1 {
+  top: 1%;
+  left: 28%;
+}
+
+.cont-training-back-2 {
+  top: 23%;
+  left: 59%;
+}
+
+.cont-training-back-3 {
+  top: 47%;
+  left: 19%;
+}
+
+.cont-training-back-4 {
+  top: 69%;
+  left: 50%;
+}
+
+.connection {
+  position: absolute;
+  width: 400px; /* Ajusta el ancho según la distancia entre círculos */
+  height: 100px; /* Ajusta el alto según el diseño deseado */
+  background-color: var(--cogna-red-dark);
+  z-index: -2;
+  clip-path: polygon(
+    0% 0%, 
+    50% 50%, 
+    100% 0%, 
+    100% 100%, 
+    50% 50%, 
+    0% 100%
+  );
+}
+
+.connection-1-2 {
+  top: 25%;
+  left: 43%;
+  transform: rotate(38deg);
+}
+
+.connection-2-3 {
+  top: 40%;
+  left: 33%;
+  transform: rotate(-30deg);
+}
+
+.connection-3-4 {
+  top: 65%;
+  left: 28%;
+  transform: rotate(25deg);
+}
+
+.circule-for-back {
+  position: absolute;
+  background-color: var(--cogna-red-lite);
+  border-radius: 50%;
+  z-index: -3;
+}
+
+.circule-for-back-1{
+  width: 180px;
+  height: 180px;
+  top: 15%;
+  left: 45%;
+}
+
+.circule-for-back-2{
+  width: 250px;
+  height: 250px;
+  top: 35%;
+  left: 28%;
+}
+
+.circule-for-back-3{
+  width: 180px;
+  height: 180px;
+  top: 25%;
+  left: 55%;
+}
+
+.circule-for-back-4{
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  left: 45%;
+}
+
+
+.circule-for-back-5{
+  width: 180px;
+  height: 180px;
+  top: 60%;
+  left: 35%;
+}
+
+
+.circule-for-back-6{
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  left: 48%;
+}

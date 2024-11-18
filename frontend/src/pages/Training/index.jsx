@@ -1,9 +1,10 @@
 import React from 'react';
+import { TrainingBody } from '../../components/TrainingBody';
 
-const Training = () => {
+const Training = ({ showModal }) => {
   return (
     <div>
-      <h1>Training</h1>
+      <TrainingBody showModal={showModal}/>
     </div>
   );
 }
