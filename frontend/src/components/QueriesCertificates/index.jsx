@@ -10,7 +10,7 @@ const QueriesCertificates = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const CC = document.getElementById("inputQC").value;
-
+  
     if (CC) {
       try {
         const response = await fetch(`${sershCertificateSena}`, {
@@ -20,27 +20,29 @@ const QueriesCertificates = () => {
           },
           body: new URLSearchParams({ CC }),
         });
-
-        if (!response.ok) {
-          throw new Error("Error al realizar la consulta.");
-        }
-
+  
         const responseData = await response.json();
-        setData(responseData);
-        setError("");
-
+  
+        if (response.ok && responseData.status === "success") {
+          setData(responseData.data[0]); // Accede al primer resultado
+          setError("");
+        } else {
+          setError(responseData.message || "Error al realizar la consulta.");
+          setData(null);
+        }
       } catch (error) {
         setError(error.message || "Error al realizar la consulta.");
+        setData(null);
       }
     } else {
       setError("Por favor, ingrese un número de documento.");
     }
-  };
+  };  
 
   return (
     <div className="container certificate-body mb-5">
       <div className="certificate">
-        <h3>Consulta de Certificados</h3>
+        <h3>Consulta de Certificados SENA</h3>
       </div>
       <form id="formConsultationCertificate" onSubmit={handleSubmit}>
         <div className="row g-2">
@@ -63,35 +65,21 @@ const QueriesCertificates = () => {
       <div>
         {error && <div className="alert alert-danger">{error}</div>}
       </div>
-      {data && (
-        <div>
-          <h4>Resultado de la consulta</h4>
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th>NRO</th>
-                <th>Fecha Emisión</th>
-                <th>Fecha Vencimiento</th>
-                <th>Alcance</th>
-                <th>Versión</th>
-                <th>Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.NRO}</td>
-                  <td>{item.FechaEmi}</td>
-                  <td>{item.FechaVen}</td>
-                  <td>{item.Alc}</td>
-                  <td>{item.version}</td>
-                  <td>{item.Edo}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {data?.ruta && (
+        <div className="certificate-container">
+          <img
+            src={data.ruta}
+            alt="certificado sena"
+            className="certificate-image"
+          />
+          <div className="watermark">
+            CONFIDENCIAL CONFIDENCIAL<br/>
+            CONFIDENCIAL CONFIDENCIAL<br/>
+            CONFIDENCIAL CONFIDENCIAL<br/>
+          </div>
         </div>
       )}
+
     </div>
   );
 };

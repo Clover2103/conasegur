@@ -24,22 +24,22 @@ const Footer = () => {
 
         <div className="redes">
           <div>
-            <a href="" target="_blank">
+            <a href="https://www.tiktok.com/@vigiempleo.com" target="_blank">
               <FaTiktok className="red-icon"/>
             </a>
           </div>
           <div>
-            <a href="https://www.facebook.com/CognoseguridadBogota/?mibextid=LQQJ4d&_rdr" target="_blank" className="cl-p" >
+            <a href="https://www.facebook.com/conasegur.conasegur/?locale=es_LA" target="_blank" className="cl-p" >
               <FaFacebook className="red-icon"/>
             </a>
           </div>
           <div>
-            <a href="https://www.instagram.com/cognoseguridad/?next=%2F" target="_blank" className="cl-p">
+            <a href="https://www.instagram.com/conasegur.conasegur/" target="_blank" className="cl-p">
               <FaInstagram className="red-icon"/>
             </a>
           </div>
           <div>
-            <a href="https://wa.link/a2j3c0" target="_blank" className="cl-p">
+            <a href="https://api.whatsapp.com/send?phone=573144422577" target="_blank" className="cl-p">
               <FaWhatsapp className="red-icon"/>
             </a>
           </div>

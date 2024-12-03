@@ -19,7 +19,7 @@ const QueriesSelect = ({ onSelectChange }) => {
           defaultValue="certificado"
         >
         <option value="diplomas">Diplomas</option>
-        <option value="certificados">Certificados</option>
+        <option value="certificados">Certificados SENA</option>
         <option value="convenios">Convenios</option>
         <option value="dia-vigilante">Dial del vigilante</option>
         <option value="conferencias">Conferencias</option>

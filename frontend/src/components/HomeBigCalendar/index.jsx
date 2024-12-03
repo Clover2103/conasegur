@@ -13,27 +13,6 @@ const sershEvent = process.env.REACT_APP_SERSH_EVENT;
 const HomeBigCalendar = () => {
   const [events, setEvents] = useState([]);
 
-  // Función para generar eventos recurrentes
-  const generateEventsForDay = (title, dayOfWeek, startHour, endHour, startDate, endDate) => {
-    const events = [];
-    let currentDate = dayjs(startDate).day(dayOfWeek).hour(startHour).minute(0).second(0);
-
-    if (currentDate.isBefore(dayjs(startDate))) {
-      currentDate = currentDate.add(1, 'week');
-    }
-
-    while (currentDate.isBefore(endDate)) {
-      events.push({
-        title,
-        start: currentDate.toDate(),
-        end: currentDate.hour(endHour).toDate(),
-      });
-      currentDate = currentDate.add(1, 'week');
-    }
-
-    return events;
-  };
-
   useEffect(() => {
     
     // Llamar a la API para obtener los eventos desde la base de datos
@@ -44,6 +23,7 @@ const HomeBigCalendar = () => {
           throw new Error('Error en la respuesta de la API: ' + response.statusText);
         }
         const data = await response.json();
+        console.log('Datos de la API:', data); // Verifica el formato aquí
 
         // Convertir las fechas a objetos Date
         const apiEvents = data.map(event => {
@@ -52,6 +32,7 @@ const HomeBigCalendar = () => {
 
           // Asegurarse de que las fechas sean válidas
           if (isNaN(start) || isNaN(end) || start >= end) {
+            console.error('Evento inválido:', event);
             return null; // O puedes lanzar un error
           }
 
@@ -61,6 +42,13 @@ const HomeBigCalendar = () => {
             end,
           };
         }).filter(event => event !== null);
+
+        // Combinar eventos de la API y los generados
+        const combinedEvents = [
+          ...apiEvents,
+        ];
+
+        setEvents(combinedEvents);
 
       } catch (error) {
         console.error('Error fetching events:', error);

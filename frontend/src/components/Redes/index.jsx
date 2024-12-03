@@ -10,25 +10,25 @@ const RedesFlotantes = () => {
     <div className="redes-flotantes">
         <div className="re-cont-flotantes">
             <div className="row con-re-float" title="Instagram">
-                <a href="#" className="cl-p">
+                <a href="https://www.tiktok.com/@vigiempleo.com" className="cl-p">
                     <FaTiktok />
                 </a>
             </div>
 
             <div className="row con-re-float" title="Facebook">
-                <a href="https://www.facebook.com/CognoseguridadBogota/?mibextid=LQQJ4d&_rdr" target="_blank" className="cl-p" >
+                <a href="https://www.facebook.com/conasegur.conasegur/?locale=es_LA" target="_blank" className="cl-p" >
                     <FaFacebook />
                 </a>
             </div>
 
             <div className="row con-re-float" title="Tik Tok">
-                <a href="https://www.instagram.com/cognoseguridad/?next=%2F" target="_blank" className="cl-p">
+                <a href="https://www.instagram.com/conasegur.conasegur/" target="_blank" className="cl-p">
                     <FaInstagram className="redes-icon"/>
                 </a>
             </div>
 
             <div className="row con-re-float" title="WhatsApp">
-                <a href="https://wa.link/a2j3c0" target="_blank" className="cl-p">
+                <a href="https://api.whatsapp.com/send?phone=573144422577" target="_blank" className="cl-p">
                     <FaWhatsapp className="redes-icon"/>
                 </a>
             </div>

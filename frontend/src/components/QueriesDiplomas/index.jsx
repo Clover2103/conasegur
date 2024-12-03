@@ -9,40 +9,35 @@ const QueriesDiplomas = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const CC = document.getElementById("inputQD").value;
-
-    if (CC) {
-      try {
-        const response = await fetch(`${sershCertificateDiploma}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({ CC }),
-        });
-
-        if (!response.ok) {
-          throw new Error("Error al realizar la consulta.");
-        }
-
-        const responseData = await response.json();
-        
-        if (responseData && responseData.length > 0) {
-          setData(responseData); // Actualiza con los datos recibidos
-          setError("");
-        } else {
-          setData(null);
-          setError("No se encontraron datos para el documento ingresado.");
-        }
-      } catch (error) {
-        setError(error.message || "Error al realizar la consulta.");
-        setData(null);
-      }
-    } else {
+    const CC = document.getElementById("inputQD").value.trim();
+  
+    if (!CC) {
       setError("Por favor, ingrese un número de documento.");
       setData(null);
+      return;
     }
-  };
+  
+    try {
+      const response = await fetch(sershCertificateDiploma, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ CC }),
+      });
+  
+      const responseData = await response.json();
+  
+      if (responseData.status === "success") {
+        setData(responseData.data);
+        setError("");
+      } else {
+        setData(null);
+        setError(responseData.message || "Error al realizar la consulta.");
+      }
+    } catch (error) {
+      setData(null);
+      setError("Error de conexión con el servidor.");
+    }
+  };  
 
   return (
     <div className="container certificate-body mb-5">
@@ -77,22 +72,22 @@ const QueriesDiplomas = () => {
             <thead>
               <tr>
                 <th>NRO</th>
-                <th>Fecha Emisión</th>
-                <th>Fecha Vencimiento</th>
-                <th>Alcance</th>
-                <th>Versión</th>
-                <th>Estado</th>
+                <th>NOMBRE</th>
+                <th>CEDULA</th>
+                <th>CURSO</th>
+                <th>EXPEDICION</th>
+                <th>INTENSIDAD</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.NRO}</td>
-                  <td>{item.FechaEmi}</td>
-                  <td>{item.FechaVen}</td>
-                  <td>{item.Alc}</td>
-                  <td>{item.version}</td>
-                  <td>{item.Edo}</td>
+                  <td>{item.nro}</td>
+                  <td>{item["1nombre"]} {item["2nombre"]} {item["1apellido"]} {item["2apellido"]}</td>
+                  <td>{item.cedula}</td>
+                  <td>{item.curso}</td>
+                  <td>{item.expedicion}</td>
+                  <td>{item.intensidad}</td>
                 </tr>
               ))}
             </tbody>

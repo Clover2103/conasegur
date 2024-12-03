@@ -1,0 +1,40 @@
+.certificate-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.certificate-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 800px; /* Ajusta según el tamaño del certificado */
+  margin: auto;
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg); /* Inclina el texto en diagonal */
+  font-size: 4vw; /* Tamaño de la fuente responsive basado en el ancho de la ventana */
+  color: rgba(255, 255, 255, 0.7); /* Color blanco semitransparente */
+  text-transform: uppercase;
+  font-weight: bold;
+  pointer-events: none; /* Permite que el certificado sea interactivo debajo */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.certificate-container {
+  position: relative;
+  user-select: none; /* Evita la selección de contenido */
+}
+
+.certificate-image {
+  pointer-events: none; /* Deshabilita interacciones como clic derecho */
+}

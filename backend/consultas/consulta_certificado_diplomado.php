@@ -15,13 +15,12 @@ header("Access-Control-Allow-Headers: Content-Type");
 include("../conexionBD.php"); // Asegúrate de que esta ruta sea correcta
 
 if (isset($_POST['CC'])) {
-    $CC = $_POST['CC'];
+    $CC = filter_var($_POST['CC'], FILTER_SANITIZE_STRING);
 
     // Establecer conexión con la base de datos
     $conn = getDbConnection();
 
-    if ($conn) {
-        // Consulta basada en si 'CC' es numérico o no
+    try {
         if (is_numeric($CC)) {
             $query = "SELECT * FROM conasegur_certificados WHERE cedula = :CC";
         } else {
@@ -32,20 +31,16 @@ if (isset($_POST['CC'])) {
         $stmt->execute([':CC' => $CC]);
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Verificar si se encontraron registros
-        if ($data) {
-            // Devolver los datos en formato JSON
-            echo json_encode(['status' => 'success', 'data' => $data]);
-        } else {
-            // Si no se encuentran registros
-            echo json_encode(['status' => 'error', 'message' => 'No se encontraron registros para el valor proporcionado']);
-        }
-    } else {
-        // Error de conexión a la base de datos
-        echo json_encode(['status' => 'error', 'message' => 'No se pudo conectar a la base de datos']);
+        echo json_encode([
+            'status' => $data ? 'success' : 'error',
+            'data' => $data ?? null,
+            'message' => $data ? null : 'No se encontraron registros para el valor proporcionado'
+        ]);
+    } catch (PDOException $e) {
+        echo json_encode(['status' => 'error', 'message' => 'Error al realizar la consulta']);
     }
 } else {
-    // Si no se proporciona el parámetro 'CC' en la solicitud
     echo json_encode(['status' => 'error', 'message' => 'No se proporcionó el parámetro CC']);
 }
+
 ?>
