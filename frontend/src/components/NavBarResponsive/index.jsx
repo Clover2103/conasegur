@@ -17,7 +17,7 @@ const NavBarResponsive = ( ) => {
       <div className="navBarResponsive__header">
         <div className="navBarResponsive__logo">
           <div className="navBarResponsive__logo conasegur-logo-navbar">
-            <Link to="/home">
+            <Link to="/">
               <img src={conasegur} alt="AIEX" />
             </Link>
           </div>
@@ -29,7 +29,7 @@ const NavBarResponsive = ( ) => {
 
       {isMenuOpen && (
         <div className="navBarResponsive__links">
-          <Link to="/home" onClick={toggleMenu}>INICIO</Link>
+          <Link to="/" onClick={toggleMenu}>INICIO</Link>
           <Link to="/training" onClick={toggleMenu}>SERVICIOS</Link>
           <Link to="/queries" onClick={toggleMenu}>CONSULTAS</Link>
           <Link to="/contacte" onClick={toggleMenu}>CONTACTO</Link>

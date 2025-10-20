@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Preview } from '../pages/Preview';
 import { Home } from '../pages/Home';
 import { Training } from '../pages/Training';
 import { Queries } from '../pages/Queries';
@@ -40,20 +39,15 @@ const RouterPages = () => {
 
   return (
     <div>
-      {location.pathname !== "/" && (
-        isMobile ? 
-          <NavBarResponsive /> : 
-          <NavBar />
-      )}
-      {location.pathname !== "/" && <RedesFlotantes />}
+      {isMobile ? <NavBarResponsive /> : <NavBar />}
+      <RedesFlotantes />
       <Routes>
-        <Route path='/' element={<Preview />} />
-        <Route path='/home' element={<Home showModal={showModal}/>} />
+        <Route path='/' element={<Home showModal={showModal}/>} />
         <Route path='/training' element={<Training showModal={showModal}/>} />
         <Route path='/queries' element={<Queries  showModal={showModal}/>} />
         <Route path='/contacte' element={<Contacte />} />
       </Routes>
-      {location.pathname !== "/" && <Footer />}
+      <Footer />
       <Modal isVisible={isModalVisible} hideModal={hideModal} content={modalContent} />
     </div>
   );

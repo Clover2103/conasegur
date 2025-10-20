@@ -68,7 +68,7 @@ const Footer = () => {
 
       <div className="cont-area col-md-4">
         <div className="cont-links">
-          <p><Link to="/home#aboutUs">¿Quienes somos?</Link></p>
+          <p><Link to="/#aboutUs">¿Quienes somos?</Link></p>
           <p><Link to="/curses">Nuestros cursos</Link></p>
           <p><Link to="/contact">Contactenos</Link></p>
           <p><Link to="/contact">Quejas / Apelaciones</Link></p>
