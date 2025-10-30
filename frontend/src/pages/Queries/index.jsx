@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Folder, BookOpen, Layers } from 'lucide-react';
+import { FileCheck , Boxes , Sun, Video  , Layers } from 'lucide-react';
 import { QueriesDiplomas } from '../../components/QueriesDiplomas';
 import { QueriesCertificates } from '../../components/QueriesCertificates';
 import { QueriesAgreement } from '../../components/QueriesAgreement';
@@ -28,11 +28,11 @@ const NavItem = ({ icon: Icon, label, value, isSelected, onClick }) => {
 
 const ConsultationSelect = ({ selectedValue, onSelectChange }) => {
   const navItems = [
-    { value: 'diplomas', label: 'Diplomas', icon: FileText },
-    { value: 'sena', label: 'Certificado Sena', icon: Folder },
-    { value: 'convenios', label: 'Convenios', icon: BookOpen },
-    { value: 'vd', label: 'Dia del vigilante', icon: BookOpen },
-    { value: 'conferencias', label: 'Conferencias', icon: BookOpen },
+    { value: 'diplomas', label: 'Diplomas', icon: FileCheck  },
+    { value: 'sena', label: 'Certificado Sena', icon: FileCheck  },
+    { value: 'convenios', label: 'Convenios', icon: Boxes  },
+    { value: 'vd', label: 'Dia del vigilante', icon: Sun  },
+    { value: 'conferencias', label: 'Conferencias', icon: Video  },
   ];
 
   return (
