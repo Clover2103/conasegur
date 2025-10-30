@@ -9,11 +9,6 @@ const RedesFlotantes = () => {
     return (
     <div className="redes-flotantes">
         <div className="re-cont-flotantes">
-            <div className="row con-re-float" title="Instagram">
-                <a href="https://www.tiktok.com/@vigiempleo.com" className="cl-p">
-                    <FaTiktok />
-                </a>
-            </div>
 
             <div className="row con-re-float" title="Facebook">
                 <a href="https://www.facebook.com/conasegur.conasegur/?locale=es_LA" target="_blank" className="cl-p" >

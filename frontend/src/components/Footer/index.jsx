@@ -24,11 +24,6 @@ const Footer = () => {
 
         <div className="redes">
           <div>
-            <a href="https://www.tiktok.com/@vigiempleo.com" target="_blank">
-              <FaTiktok className="red-icon"/>
-            </a>
-          </div>
-          <div>
             <a href="https://www.facebook.com/conasegur.conasegur/?locale=es_LA" target="_blank" className="cl-p" >
               <FaFacebook className="red-icon"/>
             </a>
