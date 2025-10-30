@@ -49,7 +49,7 @@ const HomeMAndV = () => {
         </div>
 
         <div className="rectanguloMAndV"></div>
-        <div className="circleMAndV1"></div>
+        {/* <div className="circleMAndV1"></div>
         <div className="circleMAndV2"></div>
         <div className="circleMAndV3"></div>
         <div className="circleMAndV4"></div>
@@ -61,7 +61,7 @@ const HomeMAndV = () => {
         <div className="circleMAndV10"></div>
         <div className="circleMAndV11"></div>
         <div className="circleMAndV12"></div>
-        <div className="circleMAndV13"></div>
+        <div className="circleMAndV13"></div> */}
       </div>
     </div>
   );
