@@ -1,7 +1,147 @@
+:root {
+  --cogna-red-dark: #B2463C;
+  --cogna-red-lite: #E2A897;
+  --cogna-white: #FFFFFF;
+  --cogna-dark: #000000;
+}
+
 .hidden {
   display: none;
 }
 
 .visible {
   display: block;
+}
+
+.consultation-app {
+  min-height: 100vh;
+  padding-top: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.consultation-wrapper {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+}
+
+.app-header {
+  font-size: 2rem;
+  font-weight: 800; /* Extra bold */
+  color: var(--cogna-dark);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.app-header .icon {
+    margin-right: 12px;
+    color: var(--cogna-red-dark);
+    width: 28px;
+    height: 28px;
+}
+
+/* --- ESTILOS DE NAVEGACIÓN (ConsultationSelect) --- */
+.consultation-nav-bar {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px; /* space-x-4 */
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 12px;
+  height: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+  width: calc(100% / 5);
+  opacity: 0.8; 
+  transform: scale(1.0);
+  background-color: #f3f4f6; /* gray-50 */
+  color: #6b7280; /* gray-500 */
+}
+
+.nav-item:hover {
+    opacity: 1.0;
+    background-color: #f8f8f8;
+}
+
+.nav-item .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
+}
+
+.nav-item label {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 500; /* medium */
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.nav-item.selected {
+  opacity: 1.0;
+  transform: scale(1.05);
+  background-color: var(--cogna-red-dark);
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  outline: 4px solid rgba(79, 70, 229, 0.3); 
+  outline-offset: 2px;
+  border-color: var(--cogna-red-dark);
+}
+
+/* --- ESTILOS DE CONTENIDO --- */
+.content-container {
+    margin-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.content-section {
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-lg */
+  border-radius: 0 8px 8px 8px; /* rounded-r-lg */
+  border-left-width: 4px;
+  border-left-style: solid;
+  margin-top: 16px;
+}
+
+.content-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.content-section p {
+    color: #4b5563; /* gray-600 */
+}
+
+@media screen and (max-width: 640px) {
+  .consultation-nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .nav-item {
+    padding: 8px;
+    width: 100%;
+  }
 }
